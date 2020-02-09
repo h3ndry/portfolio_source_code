@@ -74,7 +74,7 @@ const ProfileWrapper = styled.div`
   max-width: 500px;
   width: 100%;
   align-self: flex-start;
-  box-shadow: 0px 0px 30px rgba(46, 46, 46, .1);
+  box-shadow: var(--shadow);
 
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
@@ -133,7 +133,7 @@ const ProfileWrapper = styled.div`
         left: -1.4rem;
         height: 3rem;
         width: 3rem;
-        box-shadow: 3px 3px 30px rgba(95, 95, 95, .5);
+        box-shadow: var(--shadow);
 
         svg {
           height: 2rem;
@@ -172,17 +172,21 @@ const ProfileWrapper = styled.div`
     grid-column: 2 / 3;
     align-self: center;
     text-align: center;
-
+    justify-self: center;
     font-family: inherit;
     font-size: 1rem;
     font-weight: 500;
     border-radius: 30rem;
     color: var(--grey);
     background-color: var(--pri-color);
-    padding: .5em 0 .5em 0em;
+    padding: .25em .25em .25em 1.25em;
     transition: all .2s linear;
     border: none;
     cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    text-decoration: none;
     
     &:hover { background-color: var(--sec-color) }
 

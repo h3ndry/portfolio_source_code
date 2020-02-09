@@ -259,16 +259,20 @@ const HeaderWrapper = styled.header`
 }
 
   .hire-btn { 
-        font-family: inherit;
+    font-family: inherit;
     font-size: 1rem;
     font-weight: 500;
     border-radius: 30rem;
     color: var(--grey);
     background-color: var(--pri-color);
-    padding: .5em 0 .5em 0em;
+    padding: .25em .25em .25em 1em;
     transition: all .2s linear;
     border: none;
     cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    text-decoration: none;
     
     &:hover { background-color: var(--sec-color) }
 
@@ -322,8 +326,7 @@ const HeaderWrapper = styled.header`
         }
       }
 
-     
- 
+    
       &.active {
         transform: scaleX(1);
         opacity: 1;

@@ -13,6 +13,11 @@ export default createGlobalStyle`
 
 /* NOTE: Fonts family */
 --display-font: 'Roboto', sans-serif;
+
+
+/* Box-shadow */
+--shadow: 0px 0px 30px rgba(46, 46, 46, .1);
+
 }
 
 /* BASIC RESET */
@@ -22,6 +27,22 @@ export default createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: .5rem;
+  opacity: .8;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  width: 90%;
+  color: rgba(46, 46, 46, .8);
 }
 
 body {
