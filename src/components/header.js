@@ -94,13 +94,13 @@ const HeaderWrapper = styled.header`
   height: 4.5rem;
   border-radius: .5rem;
   padding-right: 1.25rem;
-  background-color: $white-color;
-  box-shadow: 1px 1px 40px rgba($black-color, .15);
+  background-color: var(--white);
+  box-shadow: 0px 0px 30px rgba(46, 46, 46, .1);
   align-items: center;
 
 
   .home {
-   background-color: $primary-color;
+   background-color: var(--pri-color);
    height: 100%;
    border-top-left-radius: .5rem;
    border-bottom-left-radius: .5rem;
@@ -112,7 +112,7 @@ const HeaderWrapper = styled.header`
    transition: all .2s linear;
 
    &:hover {
-     background-color: $secondary-color;
+     background-color: var(--sec-color);
    }
 
    .link {
@@ -127,7 +127,7 @@ const HeaderWrapper = styled.header`
     svg {
       height: 1.5rem;
       width: 1.5rem;
-      fill: $black-color;
+      fill: var(--grey);
       margin: 0 auto;
     }
   }
@@ -148,7 +148,7 @@ const HeaderWrapper = styled.header`
       font-family: inherit;
       text-decoration: none;
       font-size: .875rem;
-      color: $black-color;
+      color: var(--black);
       text-transform: uppercase;
       font-weight: 500;
       cursor: pointer;
@@ -156,7 +156,7 @@ const HeaderWrapper = styled.header`
       padding: .5em .5em;
 
       &:hover {
-        color: $secondary-color;
+        color: var(--sec-color)
       }
 
     }
@@ -164,13 +164,13 @@ const HeaderWrapper = styled.header`
   }
   .social-icon {
     a {
-      color: $black-color;
+      color: var(--black);
       padding: .7em .5em;
       &:last-child {
         margin-right: 1rem;
       }
       &:hover {
-        color: $secondary-color;
+        color: var(--sec-color);
       }
       svg {
         transition: all .2s linear;
@@ -189,15 +189,15 @@ const HeaderWrapper = styled.header`
     border-radius: 50%;
     top: 4.075rem;
     right: 2.8rem;
-    background-color: $black-color;
+    background-color: var(--black);
     z-index: 9;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 
     &.active {transform: scale(80);}
   }
   .icon-menu {
-    background-color: $primary-color;
-    color: $white-color;
+    background-color: var(--pri-color);
+    color: var(--white);
     position: fixed;
     display: none;
     flex-direction: column;
@@ -214,7 +214,7 @@ const HeaderWrapper = styled.header`
   & span {
     display: inline-block;
     position: relative;
-    background-color: rgba($bg-color, .8);
+    background-color: rgba(255, 255, 255, .8);
     height: 2px;
     border-radius: 2px;
     width: 2rem;
@@ -227,7 +227,7 @@ const HeaderWrapper = styled.header`
       border-radius: 2px;
       content: '';
       display: inline-block;
-      background-color: rgba($bg-color, .8);
+      background-color: rgba(255, 255, 255, .8);
       height: 2px;
       width: 2rem;
       margin: 0 auto;
@@ -244,13 +244,13 @@ const HeaderWrapper = styled.header`
     background-color: transparent;    
     &::after { 
       top: 0; 
-      background-color: rgba($bg-color, .8);
+      background-color: rgba(255, 255, 255, .8);
       transform: rotate(135deg); 
     }
     &::before {
       top: 0;
       transform: rotate(-135deg);
-      background-color: rgba($bg-color, .8)
+      background-color: rgba(255, 255, 255, .8)
     }
   }
   @media only screen and (max-width: 41.875em) {
@@ -308,7 +308,7 @@ const HeaderWrapper = styled.header`
 
       li {
     
-        border-bottom: 1px solid $primary-color;
+        border-bottom: 1px solid var(--pri-color);
         margin-bottom: 1rem;
         &:first-child {display: inline-block}
         
