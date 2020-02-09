@@ -26,10 +26,10 @@ const Profile = ({name}) => {
         <span>Computer Engineer</span>
       </h1>
 
-      <Img className="profile__image" fluid={data.userPhoto.childImageSharp.fluid} />
+      <Img className="user-photo" fluid={data.userPhoto.childImageSharp.fluid} />
 
 
-      <div className="profile__details">
+      <div className="details">
         <ul>
           <div className="svg-icon">
             <svg viewBox="0 0 145 116" >
@@ -49,18 +49,18 @@ const Profile = ({name}) => {
         </ul>
       </div>
 
-      <a href={'hello'} className="btn-download">
-        <button className='animated-bg'> 
-          <span style={{transform: `translateY(-1px)`}}>Download My CV</span>
-          <span className='icon'>
-          <svg  viewBox="0 0 512 512" >
-          <path d="M216,0h80c13.3,0,24,10.7,24,24v168h87.7c17.8,0,26.7,21.5,14.1,34.1L269.7,378.3c-7.5,7.5-19.8,7.5-27.3,0L90.1,226.1
-            c-12.6-12.6-3.7-34.1,14.1-34.1H192V24C192,10.7,202.7,0,216,0z M512,376v112c0,13.3-10.7,24-24,24H24c-13.3,0-24-10.7-24-24V376
-            c0-13.3,10.7-24,24-24h146.7l49,49c20.1,20.1,52.5,20.1,72.6,0l49-49H488C501.3,352,512,362.7,512,376z M388,464c0-11-9-20-20-20
-            s-20,9-20,20s9,20,20,20S388,475,388,464z M452,464c0-11-9-20-20-20s-20,9-20,20s9,20,20,20S452,475,452,464z"/>
+      <a href={'hello'} className="btn">
+        <span>Download My CV </span>
+        
+        <span className='icon'>
+          <svg  viewBox="0 0 512 512">
+            <path d="M216,0h80c13.3,0,24,10.7,24,24v168h87.7c17.8,0,26.7,21.5,14.1,34.1L269.7,378.3c-7.5,7.5-19.8,7.5-27.3,0L90.1,226.1
+              c-12.6-12.6-3.7-34.1,14.1-34.1H192V24C192,10.7,202.7,0,216,0z M512,376v112c0,13.3-10.7,24-24,24H24c-13.3,0-24-10.7-24-24V376
+              c0-13.3,10.7-24,24-24h146.7l49,49c20.1,20.1,52.5,20.1,72.6,0l49-49H488C501.3,352,512,362.7,512,376z M388,464c0-11-9-20-20-20
+              s-20,9-20,20s9,20,20,20S388,475,388,464z M452,464c0-11-9-20-20-20s-20,9-20,20s9,20,20,20S452,475,452,464z"/>
           </svg>
-         </span>
-      </button>
+        </span>
+
     </a>
 
   </ProfileWrapper>
@@ -74,6 +74,129 @@ const ProfileWrapper = styled.div`
   max-width: 500px;
   width: 100%;
   align-self: flex-start;
-  box-shadow: 1px 1px 40px rgba($black-color, .15);
+  box-shadow: 0px 0px 30px rgba(46, 46, 46, .1);
+
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: 4rem repeat(2, min-content) 7rem;
+
+  background-color: var(--white);
+  border-radius: .5rem;
+
+  h1 {
+    grid-column: 2 / 3;
+    align-self: center;
+    padding-top: 1em;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+    span {
+      text-transform: capitalize;
+      color: grey;
+      font-size: 1rem;
+      display: block;
+      letter-spacing: 2px;
+      font-weight: 400;
+      
+    }
+  }
+
+  .user-photo {
+    grid-column: 1 / -1;
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+  }
+
+  .details {
+    grid-column: 2 / 3;
+    font-size: .875rem;
+      
+    & ul {
+      list-style: none;
+      padding-top: 3em;
+      margin-top: 0;
+      margin-bottom: 2em 0;
+      padding-left: 0;
+      border-left: solid 2px rgba(95, 95, 95, .2);
+      position: relative;
+
+      .svg-icon {
+        position: absolute;
+        padding: .5rem;
+        border-radius: 50%;
+        background-color: var(--pri-color);
+        text-align: center;
+        top: -2rem;
+        left: -1.4rem;
+        height: 3rem;
+        width: 3rem;
+        box-shadow: 3px 3px 30px rgba(95, 95, 95, .5);
+
+        svg {
+          height: 2rem;
+          width: 2rem;
+          fill: var(--grey);
+        }
+        
+      }
+      
+      & li {
+        position: relative;
+        margin-bottom: 1em;
+        padding-left: 1.5em;
+        color: #5f5f5f;
+        font-weight: 400;
+        
+        & span {
+          font-size: .875rem;
+          color: var(--black);
+        }
+          &::before {
+            position: absolute;
+            content: "";
+            height: 8px;
+            width: 8px;
+            left: -5px;
+            top: 4px;
+            border-radius: 50%;
+            border: solid 2px var(--pri-color);
+          }
+      }
+    }
+  }
+
+  .btn {
+    grid-column: 2 / 3;
+    align-self: center;
+    text-align: center;
+
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 30rem;
+    color: var(--grey);
+    background-color: var(--pri-color);
+    padding: .5em 0 .5em 0em;
+    transition: all .2s linear;
+    border: none;
+    cursor: pointer;
+    
+    &:hover { background-color: var(--sec-color) }
+
+    span { 
+      display: inline-block;
+      &.icon {
+        width: 2rem;
+        height: 2rem;
+        padding: .5rem;
+        margin-left: 1rem;
+        background-color: var(--white);
+        border-radius: 50%;
+      }
+    }
+  }
 
 `

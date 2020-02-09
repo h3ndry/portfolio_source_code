@@ -9,7 +9,7 @@ export default createGlobalStyle`
 --sec-color: #ef0078;
 --white: #fff;
 --black: #2e2e2e;
---grey-color: #5f5f5f;
+--grey: rgba(255, 255, 255, .8);
 
 /* NOTE: Fonts family */
 --display-font: 'Roboto', sans-serif;

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Henkho Dryza Porfolio`,
-    description: `The official website of Henkho Dryza`,
+    title: `Hendry Khoza`,
+    description: `The official website of Hendry Khoza`,
     author: `@henkhodryza`,
   },
   plugins: [

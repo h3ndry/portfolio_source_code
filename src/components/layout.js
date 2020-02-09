@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
     <SiteWrapper >
       <GlobalStyles />
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Profile />
+      <Profile name={data.site.siteMetadata.title} />
 
       <main>{children}</main>
 
