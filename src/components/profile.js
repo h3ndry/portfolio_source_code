@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Layout from "../components/layout"
+import myCV from '../resources/cv-january-update.pdf'
 
 const Profile = ({name}) => {
   
@@ -49,7 +49,7 @@ const Profile = ({name}) => {
         </ul>
       </div>
 
-      <a href={'hello'} className="btn">
+      <a href={myCV} className="btn">
         <span>Download My CV </span>
         
         <span className='icon'>

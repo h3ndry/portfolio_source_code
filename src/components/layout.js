@@ -35,9 +35,11 @@ const Layout = ({ children }) => {
       <main>{children}</main>
 
       <footer>
-        © {new Date().getFullYear()}, Built with
+        <div >
+          © {new Date().getFullYear()}, All right reserved by
           {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <a href="https://www.gatsbyjs.org">Henkho Dryza</a>
+        </div>
       </footer>
 
     </SiteWrapper >
@@ -92,6 +94,28 @@ const SiteWrapper = styled.div`
 
   footer {
     grid-area: footer;
+
+    grid-area: footer;
+    font-size: .875rem;
+    text-align: center;
+    color: grey;
+    background-color: var(--black);
+    border-radius: .5rem;
+    min-height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        color: var(--sec-color);
+      }
+    }
+
   }
 
 `
