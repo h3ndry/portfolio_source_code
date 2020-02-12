@@ -46,7 +46,7 @@ const Header = ({ siteTitle }) => {
         <li><Link activeStyle={{ color: `#ef0078` }} to='/'>Home</Link></li>
         <li><Link activeStyle={{ color: `#ef0078` }} to='/resume'>Resume</Link></li>
         <li><Link activeStyle={{ color: `#ef0078`}} to='/portfolio'>Portfolio</Link></li>
-        <li><Link activeStyle={{ color: `#ef0078` }}to='/contact'>Contact</Link></li >
+        <li><Link activeStyle={{ color: `#ef0078` }} to='/contact'>Contact</Link></li >
     </ul >
     <div className="social-icon">
         {headerData.socialLinks.map((link, index) => <a
