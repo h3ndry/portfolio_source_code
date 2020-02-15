@@ -40,8 +40,8 @@ const CardThree = ({ project: { title, gitURL, demoURL, text, img } }) => {
         <p>{text}</p>
       </div>
       <div className="btn-container">
-        <a href={gitURL}>Live Demo</a>
-        <a href={demoURL}>Git Repo</a>
+        <a href={gitURL}>Git Repo</a>
+        <a href={demoURL}>Live Demo</a>
       </div>
     </div>
   )

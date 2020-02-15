@@ -21,8 +21,8 @@ const Portfolio = () => {
       title: 'Cell Phone Store',
       img: require('../images/react-store.gif'),
       text: `A cell phone store web applicatin built with React JS using context API`,
-      demoURL: `http:www.whater.com`,
-      gitURL: `http:www.whatever.com`
+      demoURL: `https://cell-phone-store.netlify.com/`,
+      gitURL: `https://github.com/henkhodryza/cell-phone-store`
     },
     {
       id: `prject-2`,
@@ -30,7 +30,7 @@ const Portfolio = () => {
       img: require('../images/natour-r.gif'),
       text: `A travel agents website built on React using gatsby static side generatore `,
       demoURL: `http:www.whater.com`,
-      gitURL: `http:www.whatever.com`
+      gitURL: `https://github.com/henkhodryza/Natour-React-Gatsby`
     }
   ]
 

@@ -58,7 +58,7 @@ const Header = ({ siteTitle }) => {
       </a> )}
     </div>
       <button className='hire-btn animated-bg' ref={el => hireBtn = el} >
-      Hire Me
+        <a href="https://wa.me/27812490306?text=Hello%20I'm%20interested%20in%20Hiring%20you">Hire Me</a>
       <span className="icon">
         <svg viewBox="0 0 448 375.7" >
         <path d="M446.7,34.2L379.1,353c-5.1,22.5-18.4,28.1-37.3,17.5l-103-75.9l-49.7,47.8c-5.5,5.5-10.1,10.1-20.7,10.1l7.4-104.9
