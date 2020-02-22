@@ -86,7 +86,7 @@ const ProfileWrapper = styled.div`
   h1 {
     grid-column: 2 / 3;
     align-self: center;
-    padding-top: 1em;
+    padding-top: 1.5em;
     margin-bottom: 1rem;
     text-transform: uppercase;
     color: var(--black);

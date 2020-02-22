@@ -53,7 +53,7 @@ const IndexPage = () => {
             <span className='text'>{homeData.aboutTittle}</span>
             <span className='underline'></span>
           </h2>
-          {homeData.aboutText.map(text => <p>{text}</p>)}
+          {homeData.aboutText.map(text => <p key={text} >{text}</p>)}
         </section>
 
         <section>
@@ -66,6 +66,7 @@ const IndexPage = () => {
               svg={skill.svgPath}
               skill={skill.skill}
               skillText={skill.aboutSkill}
+              key={skill.skill}
             />)}
           </div>
         </section>
@@ -81,6 +82,7 @@ const IndexPage = () => {
               name={person.name}
               desc={person.desc}
               text={person.text}
+              key={index}
             />)}
           </div>
         </section>
@@ -148,7 +150,16 @@ const HomePageWrapper = styled.div`
       }
     }
 
-    &:nth-child(1) h2 .underline { width: 6.65rem }
+    &:nth-child(1) {
+      h2 .underline { width: 6.65rem }
+
+      @media only screen and (max-width: 37.5em ) {
+        p { width: 100%}
+      }
+      
+      }
+
+
     &:nth-child(2) {
       background: var(--bg-color);
       h2 .underline  { width: 6.45rem }

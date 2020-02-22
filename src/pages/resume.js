@@ -169,9 +169,6 @@ const ResumeWrapper = styled.div`
             top: 4px;
             border-radius: 50%;
             border: solid 2px  var(--pri-color);
-            @media only screen and (max-width: 66.25em ) {
-              left: -19px;
-            }
           }
 
           h3 {
@@ -188,6 +185,10 @@ const ResumeWrapper = styled.div`
             line-height: 1.5; 
             opacity: .6;
             width: 80%;
+            @media only screen and (max-width: 37.5em ) {
+              width: 100%;
+            }
+
           }
         }
       }

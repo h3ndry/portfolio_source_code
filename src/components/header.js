@@ -13,16 +13,21 @@ const Header = ({ siteTitle }) => {
   let navBg = useRef(null)
 
   useEffect(() => {
+    // // I am just trying if this worlk
+    // navBg.classList.add('active')
+    // nav.classList.add('active')
+
+    nav.classList.remove('active')
+    hireBtn.classList.remove('active')
+    menu.classList.remove('active')
+    navBg.classList.remove('active')
+
 
     menu.addEventListener('click', () => {
-
       nav.classList.toggle('active')
       hireBtn.classList.toggle('active')
       menu.classList.toggle('active')
       navBg.classList.toggle('active')
-
-
-      console.log(menu.classList)
 
 
     })
@@ -42,7 +47,7 @@ const Header = ({ siteTitle }) => {
       	C577.5,231.2,576.8,223.7,571.6,219.4C571.6,219.4,571.6,219.4,571.6,219.4L571.6,219.4z" />
       </svg>
     </div>
-      <ul className='nav' ref={el => nav = el} >
+      <ul className='nav active' ref={el => nav = el} >
         <li><Link activeStyle={{ color: `#ef0078` }} to='/'>Home</Link></li>
         <li><Link activeStyle={{ color: `#ef0078` }} to='/resume'>Resume</Link></li>
         <li><Link activeStyle={{ color: `#ef0078`}} to='/portfolio'>Portfolio</Link></li>
@@ -51,24 +56,29 @@ const Header = ({ siteTitle }) => {
     <div className="social-icon">
         {headerData.socialLinks.map((link, index) => <a
           key={index}
+          target="_blank"
           href={link.to}>
+          
           <svg viewBox={link.viewBox}>
             <path d={link.svgPath}/>
           </svg>
       </a> )}
     </div>
-      <button className='hire-btn animated-bg' ref={el => hireBtn = el} >
-        <a href="https://wa.me/27812490306?text=Hello%20I'm%20interested%20in%20Hiring%20you">Hire Me</a>
-      <span className="icon">
-        <svg viewBox="0 0 448 375.7" >
-        <path d="M446.7,34.2L379.1,353c-5.1,22.5-18.4,28.1-37.3,17.5l-103-75.9l-49.7,47.8c-5.5,5.5-10.1,10.1-20.7,10.1l7.4-104.9
-          L366.7,75.1c8.3-7.4-1.8-11.5-12.9-4.1l-236,148.6L16.2,187.8c-22.1-6.9-22.5-22.1,4.6-32.7L418.2,2C436.6-4.9,452.7,6.1,446.7,34.2
-          z"/>
-        </svg>
-      </span>
-    </button>
-      <div className="nav-bg" ref={el => navBg = el}></div>
-    <div className='icon-menu' ref={ el => menu = el } >
+        <a 
+          className='hire-btn animated-bg active' ref={el => hireBtn = el}
+          href="https://wa.me/27812490306?text=Hello%20I'm%20interested%20in%20Hiring%20you">
+          Hire Me
+          <span className="icon">
+            <svg viewBox="0 0 448 375.7" >
+            <path d="M446.7,34.2L379.1,353c-5.1,22.5-18.4,28.1-37.3,17.5l-103-75.9l-49.7,47.8c-5.5,5.5-10.1,10.1-20.7,10.1l7.4-104.9
+              L366.7,75.1c8.3-7.4-1.8-11.5-12.9-4.1l-236,148.6L16.2,187.8c-22.1-6.9-22.5-22.1,4.6-32.7L418.2,2C436.6-4.9,452.7,6.1,446.7,34.2
+              z"/>
+            </svg>
+          </span>
+      </a>
+
+      <div className="nav-bg active" ref={el => navBg = el}></div>
+    <div className='icon-menu active' ref={ el => menu = el } >
       <span></span>
     </div>
     </HeaderWrapper>
@@ -184,11 +194,11 @@ const HeaderWrapper = styled.header`
   .nav-bg {
     position: fixed;
     display: none;
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
-    top: 4.075rem;
-    right: 2.8rem;
+    top: 4.15rem;
+    right: 2.75rem;
     background-color: var(--black);
     z-index: 9;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -202,8 +212,8 @@ const HeaderWrapper = styled.header`
     display: none;
     flex-direction: column;
     justify-content: center;
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
     border-radius: 50%;
     transition: all .2s cubic-bezier(0.65, 0.05, 0.36, 1);
@@ -217,7 +227,7 @@ const HeaderWrapper = styled.header`
     background-color: rgba(255, 255, 255, .8);
     height: 2px;
     border-radius: 2px;
-    width: 2rem;
+    width: 1.8rem;
     margin: 0 auto;
     transition: all .2s cubic-bezier(0.65, 0.05, 0.36, 1);
 
@@ -229,7 +239,7 @@ const HeaderWrapper = styled.header`
       display: inline-block;
       background-color: rgba(255, 255, 255, .8);
       height: 2px;
-      width: 2rem;
+      width: 1.8rem;
       margin: 0 auto;
       left: 0;
       transition: all .2s cubic-bezier(0.65, 0.05, 0.36, 1);
