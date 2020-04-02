@@ -1,0 +1,10 @@
+
+       @font-face {
+          font-family: "Robot";
+          src: url("Robot-Regular.ttf");
+        }
+
+        @font-face {
+          font-family: "Dank Mono";
+          src: url("DankMono-Regular.otf");
+        }
