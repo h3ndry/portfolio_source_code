@@ -29,20 +29,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
-        fonts: [
-          {
-            family: `Roboto`,
-            variants: [`400`, `700`]
-          },
-          {
-            family: `Open Sans`,
-            subsets: [`latin`],
-          },
-        ],
+        custom: {
+          families: ["Roboto, Dank Mono"],
+          urls: ["/fonts/fonts.css"],
+        },
       },
-    }
+    },
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

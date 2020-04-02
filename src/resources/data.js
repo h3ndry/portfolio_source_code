@@ -38,7 +38,7 @@ export const homeData = {
       skill: `Web Development`,
       viewBox: `0 0 640 512`,
       svgPath: webDev,
-      aboutSkill: `Full Stack Web Development using Technolody such as Node.JS, React and MangoDB`
+      aboutSkill: `Full Stack Web Development using Technology such as Node.JS, React and MongoDB`
     },
     {
       skill: `Database Manangement`,

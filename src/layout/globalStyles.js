@@ -2,6 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`
 
+
+
 /* Color variables */
 :root {
 --bg-color: #FAFAFA;
